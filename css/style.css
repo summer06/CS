@@ -1,0 +1,50 @@
+.banner {
+	width: 1040px;
+	height: 220px;
+	/*background-color: #ddd;*/
+
+	margin: 0 auto;
+}
+
+.banner p {
+	display: block;
+	line-height: 80px;
+
+	padding-top: 120px;
+
+	font-size: 80px;
+}
+
+.navbar {
+	width: 1040px;
+
+	margin: 0 auto;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.container {
+	width: 1040px;
+	height: 400px;
+
+	margin: 0 auto;
+	background-color: #ddd;
+}
+
+.footer {
+	width: 1040px;
+	height: 40px;
+
+	margin: 0 auto;
+	margin-top: 10px;
+	/*background-color: #ddd;*/
+}
+
+.footer p {
+	display: block;
+	width: 100%;
+	line-height: 40px;
+	font-size: 14px;
+
+	text-align: center;
+}
