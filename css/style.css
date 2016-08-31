@@ -1,6 +1,10 @@
+.input-group.focus {
+	border-color: #1abc9c;
+}
+
 .banner {
 	width: 1040px;
-	height: 220px;
+	height: 140px;
 	/*background-color: #ddd;*/
 
 	margin: 0 auto;
@@ -10,7 +14,7 @@
 	display: block;
 	line-height: 80px;
 
-	padding-top: 120px;
+	padding-top: 60px;
 
 	font-size: 80px;
 }

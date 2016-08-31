@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+    
+    <constant name="struts.action.extension" value="action,do,"></constant>
+    
+    <package name="helloWorld" extends="struts-default">
+        
+        
+        <action name="sign-*"
+            class="com.eecn.app.SignAction"
+            method="{1}">
+            <result name="{1}" type="redirect">sign-list.do</result>
+            <result>/user/sign-list.jsp</result>
+            <result name="list">/user/sign-list.jsp</result>
+            <result name="edit">/user/sign-edit.jsp</result>
+        </action>
+        
+        <action name="admin-*"
+            class="com.eecn.app.AdminAction"
+            method="{1}">
+            <result name="{1}">/admin/admin-{1}.jsp</result>
+            <result>/admin/admin.jsp</result>
+            <result name="login">/admin/admin-login.jsp</result>
+        </action>
+        
+        <action name="user-*"
+            class="com.eecn.app.UserAction"
+            method="{1}">
+            <result name="{1}">/user/user-{1}.jsp</result>
+            <result>/user/user.jsp</result>
+            <result name="login">/user/user-login.jsp</result>
+        </action>
+        
+        <action name="admin-user-*"
+            class="com.eecn.app.UserAction"
+            method="{1}">
+            <result name="{1}">/admin/user-{1}.jsp</result>
+            <result name="save" type="redirect">admin-users.do</result>
+            <result name="delete" type="redirect">admin-users.do</result>
+            <result name="update" type="redirect">admin-users.do</result>
+        </action>
+        
+        <action name="game-*"
+            class="com.eecn.app.GameAction"
+            method="{1}">
+            <result name="{1}">/admin/game-{1}.jsp</result>
+            <result name="save" type="redirect">admin-games.do</result>
+            <result name="delete" type="redirect">admin-games.do</result>
+            <result name="update" type="redirect">admin-games.do</result>
+            <result name="sign">/user/game-sign.jsp</result>
+        </action>
+        
+        <action name="event-*"
+            class="com.eecn.app.EventAction"
+            method="{1}">
+            <result name="{1}">/admin/event-{1}.jsp</result>
+            <result name="save" type="redirect">admin-events.do</result>
+            <result name="delete" type="redirect">admin-events.do</result>
+            <result name="update" type="redirect">admin-events.do</result>
+        </action>
+        
+        <action name="student-*"
+            class="com.eecn.app.StudentAction"
+            method="{1}">
+            <result name="{1}">/user/student-{1}.jsp</result>
+            <result name="uploadpic">/user/student-upload.jsp</result>
+            <result name="save" type="redirect">student-list.do</result>
+            <result name="delete" type="redirect">student-list.do</result>
+            <result name="update" type="redirect">student-list.do</result>
+            <result name="cut">/user/student-cut.jsp</result>
+            <result>/user/user.jsp</result>
+        </action>
+        
+    </package>
+
+</struts>
